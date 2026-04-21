@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #020409;
+  color: #e2e8f0;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #060d1a; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f5ff, #bf00ff);
+  border-radius: 3px;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(0, 245, 255, 0.3);
+  color: #fff;
+}
+
+/* ── Neon Utilities ── */
+.neon-text-cyan {
+  color: #00f5ff;
+  text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff40;
+}
+.neon-text-purple {
+  color: #bf00ff;
+  text-shadow: 0 0 10px #bf00ff, 0 0 20px #bf00ff40;
+}
+.neon-border-cyan {
+  border: 1px solid #00f5ff40;
+  box-shadow: 0 0 15px #00f5ff20, inset 0 0 15px #00f5ff08;
+}
+.glass {
+  background: rgba(6, 13, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.gradient-text {
+  background: linear-gradient(135deg, #00f5ff, #bf00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-padding {
+  padding: 100px 0;
+}
+
+/* ── Canvas fill ── */
+canvas { display: block; }
